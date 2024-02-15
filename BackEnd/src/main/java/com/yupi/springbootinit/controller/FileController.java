@@ -10,7 +10,7 @@ import com.yupi.springbootinit.manager.CosManager;
 import com.yupi.springbootinit.model.dto.file.UploadFileRequest;
 import com.yupi.springbootinit.model.entity.User;
 import com.yupi.springbootinit.model.enums.FileUploadBizEnum;
-import com.yupi.springbootinit.service.UserService;
+
 import java.io.File;
 import java.util.Arrays;
 import javax.annotation.Resource;
@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import com.yupi.springbootinit.service.UserService;
 
 /**
  * 文件接口

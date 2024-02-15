@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.springbootinit.model.entity.Post;
 import com.yupi.springbootinit.model.entity.PostFavour;
 import com.yupi.springbootinit.model.entity.User;
+import com.yupi.springbootinit.model.entity.Chart;
 
 /**
  * 帖子收藏服务
@@ -44,4 +45,13 @@ public interface PostFavourService extends IService<PostFavour> {
      * @return
      */
     int doPostFavourInner(long userId, long postId);
+
+    /**
+    * @author vhaow
+    * @description 针对表【chart(图表表)】的数据库操作Service
+    * @createDate 2024-02-15 01:31:39
+    */
+    interface ChartService extends IService<Chart> {
+
+    }
 }
