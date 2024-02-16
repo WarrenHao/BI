@@ -24,6 +24,7 @@ public class ChartEditRequest implements Serializable {
     /**
      * 标题
      */
+    private String name;
     private String goal;
 
     private String chartData;

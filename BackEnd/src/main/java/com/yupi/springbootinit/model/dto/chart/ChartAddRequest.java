@@ -23,6 +23,7 @@ public class ChartAddRequest implements Serializable {
     /**
      * 标题
      */
+    private String name;
     private String goal;
 
     private String chartData;
