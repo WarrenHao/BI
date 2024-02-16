@@ -1,6 +1,11 @@
 export default [
   { path: '/user', layout: false, routes: [{ path: '/user/login', component: './User/Login' }] },
   { path: '/user', layout: false, routes: [{ path: '/user/register', component: './User/Register' }] },
+  
+  {path:'/', redirect:'/add'},
+  
+  {path: '/add', icon:'smile', component:'./AddChart'},
+
 
   { path: '/welcome', name: '欢迎', icon: 'smile', component: './Welcome' },
   {

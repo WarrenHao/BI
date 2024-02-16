@@ -77,6 +77,7 @@ wx:
         host: 127.0.0.1
         port: 6379
       type: Memory
+#
   # 微信开放平台
   # todo 需替换配置
   open:
@@ -101,3 +102,10 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.yupi.springbootinit.controller
+
+
+#  ai开放平台
+yuapi:
+  client:
+    access-key: i283n9zz6ureps62locvqsa8rnjdufth
+    secret-key: 2dxov7qbmlc5tcuypjved3v0l364ofao
