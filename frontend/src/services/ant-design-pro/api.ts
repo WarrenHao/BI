@@ -92,3 +92,16 @@ export async function removeRule(options?: { [key: string]: any }) {
     }
   });
 }
+
+
+/** 注册接口 POST /api/user/register */
+export async function register(body: API.RegisterParams, options?: { [key: string]: any }) {
+  return request<API.BaseResponse<API.RegisterResult>>('/api/user/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}
