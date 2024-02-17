@@ -312,8 +312,10 @@ public class ChartController {
         userInput.append(result).append("\n");
 
 
-        String resultFromAi = aiManager.doChat(biModelId, userInput.toString());
-        String[] splits = resultFromAi.split("【【【【【");
+//        String resultFromAi = aiManager.doChat(biModelId, userInput.toString());
+        String resultFromAi = aiManager.doChatGMl(userInput.toString());
+        String[] splits = resultFromAi.split("【【");
+
         if (splits.length < 3) {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "AI 响应错误");
         }

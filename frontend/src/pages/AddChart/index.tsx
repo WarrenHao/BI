@@ -31,13 +31,15 @@ const AddChart: React.FC = () => {
       ...values,
       file: undefined,
     };
+
     try {
       const res = await genChartByAiUsingPost(params, {}, values.file.file.originFileObj);
+      console.log(res.data.genChartCode)
       if (!res?.data) {
         message.error('分析失败');
       } else {
         message.success('分析成功');
-        const chartOption = JSON.parse(res.data.genChart ?? '');
+        const chartOption = JSON.parse(res.data.genChartCode ?? '');
         if (!chartOption) {
           throw new Error('图表代码解析错误')
         } else {
@@ -98,7 +100,7 @@ const AddChart: React.FC = () => {
         </Col>
         <Col span={12}>
           <Card title="分析结论">
-            {chart?.genResult ?? <div>请先在左侧进行提交</div>}
+            {chart?.analyzeResult ?? <div>请先在左侧进行提交</div>}
             <Spin spinning={submitting}/>
           </Card>
           <Divider />

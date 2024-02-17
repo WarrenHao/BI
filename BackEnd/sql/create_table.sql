@@ -3,6 +3,7 @@
 -- 创建库
 create database if not exists AutoBI;
 
+
 -- 切换库
 use AutoBI;
 
