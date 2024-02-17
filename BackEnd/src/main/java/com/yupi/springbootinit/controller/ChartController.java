@@ -301,11 +301,11 @@ public class ChartController {
 //        用户输入
         StringBuilder userInput = new StringBuilder();
         userInput.append("分析目标：").append(goal).append("\n");
-        String userGoal = goal;
+        String userGoal = "";
         if (StringUtils.isNotBlank(chartType)) {
             userGoal += "请使用" + chartType;
         }
-        userInput.append(goal).append("\n");
+        userInput.append(userGoal).append("\n");
 
         userInput.append("原始数据：").append("\n");
         String result = ExcelUtils.excelToCsv(multipartFile);
