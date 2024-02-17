@@ -7,5 +7,5 @@ public class BiResponse {
 
     private String genChartCode;
     private String analyzeResult;
-    private long chartId;
+    private Long chartId;
 }

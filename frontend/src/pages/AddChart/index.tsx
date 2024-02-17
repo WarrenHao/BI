@@ -34,7 +34,7 @@ const AddChart: React.FC = () => {
 
     try {
       const res = await genChartByAiUsingPost(params, {}, values.file.file.originFileObj);
-      console.log(res.data.genChartCode)
+      console.log(res.data.genChartCode);
       if (!res?.data) {
         message.error('分析失败');
       } else {

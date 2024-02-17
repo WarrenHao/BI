@@ -273,7 +273,7 @@ public class ChartController {
      * @return
      */
     @PostMapping("/gen")
-    public BaseResponse<String> genChartByAi(@RequestPart("file") MultipartFile multipartFile,
+    public BaseResponse<BiResponse> genChartByAi(@RequestPart("file") MultipartFile multipartFile,
                                              GenChartByAiRequest genChartByAiRequest, HttpServletRequest request) {
 
         String name = genChartByAiRequest.getName();
@@ -340,7 +340,7 @@ public class ChartController {
         biResponse.setChartId(chart.getId());
 
 
-        return ResultUtils.success(biResponse.toString());
+        return ResultUtils.success(biResponse);
 //        读取文件进行处理
 
 
