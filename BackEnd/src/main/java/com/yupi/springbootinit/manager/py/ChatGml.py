@@ -33,7 +33,7 @@ if __name__ == '__main__':
     while task_status != 'SUCCESS' and task_status != 'FAILED' and get_cnt <= 40:
         result_response = client.chat.asyncCompletions.retrieve_completion_result(id=task_id)
         task_status = result_response.task_status
-        time.sleep(0.8)
+        time.sleep(0.6)
         if task_status == 'SUCCESS':
             print(result_response.choices[0].message.content)
         get_cnt += 1

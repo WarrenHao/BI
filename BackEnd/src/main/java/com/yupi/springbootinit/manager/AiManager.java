@@ -57,7 +57,7 @@ public class AiManager {
         }catch (Exception e){
             System.out.println("获取绝对路径失败");
         }
-        
+
         ProcessBuilder processBuilder = new ProcessBuilder("python",absolutePath,message);
         try {
             Process process = processBuilder.start();
