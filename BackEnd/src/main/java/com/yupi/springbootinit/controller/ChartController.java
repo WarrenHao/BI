@@ -3,6 +3,7 @@ package com.yupi.springbootinit.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yupi.springbootinit.annotation.AuthCheck;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.yupi.springbootinit.common.BaseResponse;
 import com.yupi.springbootinit.common.DeleteRequest;
 import com.yupi.springbootinit.common.ErrorCode;
@@ -48,6 +49,7 @@ import java.io.File;
 @RestController
 @RequestMapping("/chart")
 @Slf4j
+@CrossOrigin
 public class ChartController {
 
     @Resource
