@@ -48,7 +48,7 @@ public class Chart implements Serializable {
      * 是否删除
      */
     @TableLogic
-    private Integer isDeleted;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

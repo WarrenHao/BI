@@ -36,7 +36,6 @@ export async function getInitialState(): Promise<{
     const currentUser = await fetchUserInfo();
     return {
       currentUser,
-      
     };
   }
   return {
